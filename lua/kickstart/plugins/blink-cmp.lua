@@ -73,6 +73,16 @@ return {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+
+        -- To avoid missing icons in the auto-completion because nerd font not installed.
+        -- https://github.com/nvim-lua/kickstart.nvim/issues/1474
+        menu = {
+          draw = {
+            -- Components to render, grouped by column
+            columns = vim.g.have_nerd_font and { { 'kind_icon' }, { 'label', 'label_description', gap = 1 } }
+              or { { 'kind' }, { 'label', 'label_description', gap = 1 } },
+          },
+        },
       },
 
       sources = {
