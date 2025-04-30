@@ -235,6 +235,7 @@ return {
             },
           },
         },
+        pyright = {},
       }
 
       -- Ensure the servers and tools above are installed
