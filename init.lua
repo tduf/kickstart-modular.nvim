@@ -91,7 +91,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+-- On Fedora 41: sudo dnf copr enable che/nerd-fonts && sudo dnf install nerd-fonts
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 require 'options'
